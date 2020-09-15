@@ -1,0 +1,48 @@
+8 9 10
+Triangle is regular.
+10 9 8
+Triangle is regular.
+6 8 7
+Triangle is regular.
+0,3 0,4 0,5
+Triangle is regular.
+7 7 7
+Triangle is equilateral.
+3,33 3,33 3,33
+Triangle is equilateral.
+1,7976931348623157E+308 1,7976931348623157E+308 1,7976931348623157E+308
+Triangle is equilateral.
+2 3 3
+Triangle is isosceles.
+3 3 2
+Triangle is isosceles.
+3 2 3
+Triangle is isosceles.
+3	2	3
+Triangle is isosceles.
+3             2             3
+Triangle is isosceles.
+36,89 20 36,89
+Triangle is isosceles.
+8 2 3
+Triangle cannot be build.
+0,008 0,002 0,003
+Triangle cannot be build.
+-300 500 700
+Triangle cannot be build.
+6 0 9
+Triangle cannot be build.
+A B C
+Argument format exception was thrown at 'A' argument.
+8 9 BBBB
+Argument format exception was thrown at 'BBBB' argument.
+////@@@%&^%&^%&^&^
+Invalid arguments count.
+1 2
+Invalid arguments count.
+1 2 3 4 5
+Invalid arguments count.
+
+Invalid arguments count.
+1
+Invalid arguments count.
