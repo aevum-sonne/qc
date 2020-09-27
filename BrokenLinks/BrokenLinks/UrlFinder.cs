@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using HtmlAgilityPack;
@@ -20,10 +21,10 @@ namespace BrokenLinks
         private static bool IsSitePage(string str)
         {
             // Condition { Not in excepted links or anchor }
-            return !(Excepted.Any(element => str.Contains(element)) || str.StartsWith("#"));
+            return !(Excepted.Any(str.Contains) || str.StartsWith("#"));
         }
 
-        private static HashSet<string> GetUniqueLinksFromPage(string url)
+        private static List<string> GetUniqueLinksFromPage(string url)
         {
             // Load DOM
             var web = new HtmlWeb();
@@ -35,41 +36,43 @@ namespace BrokenLinks
                 .Where(u => !string.IsNullOrEmpty(u) && IsSitePage(u))
                 .ToHashSet();
 
-            return links;
+            return links.ToList();
         }
 
-        // DFS traversal of site pages
+        // DFS traversal on site pages
         public static IEnumerable<string> GetUniqueLinksFromSite(string url)
         {
-            // Get all unique links (hashset) from root url
+            // Get all unique links from root url
             var links = GetUniqueLinksFromPage(url);
             
-            var stack = new Stack<string>();    // Stores unvisited links to visit
-            var visited = new Stack<string>();    // Result array with all unique links
-            
-            // Start search from first link that stores root url
-            stack.Push(links.First());
+            var stack = new List<string>();    // Stores unvisited links to visit
+            var visited = new List<string>();    // All links that called GetUniqueLinksFromPage()
 
-            while (stack.Count != 0)
+            // Start traversal from first element
+            stack.Add(links.First());
+            
+            while (stack.Any())
             {
-                var link = stack.Pop();
+                // Pop first element from stack
+                var link = stack.First();
+                stack.RemoveAt(0);
 
                 if (!visited.Contains(link))
                 {
-                    // Append new links from current link to hashset
-                    links.UnionWith(GetUniqueLinksFromPage(url + "/" + link));
-
-                    visited.Push(link);
+                    visited.Add(link);
                 }
+                
+                links = GetUniqueLinksFromPage(url + link);
 
-                // If unvisited push to stack all links
-                foreach (var curr in links.Where(curr => !visited.Contains(curr)))
+                // If unvisited and not in stack push to stack
+                foreach (var currLink in links.Where(currLink => !visited.Contains(currLink)))
                 {
-                    stack.Push(curr);
+                    visited.Add(currLink);
+                    stack.Insert(0, currLink);
                 }
             }
             
-            return visited.OrderBy(s => s).ToList();
+            return visited;
         }
     }
 }

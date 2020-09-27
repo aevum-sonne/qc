@@ -7,15 +7,21 @@ namespace BrokenLinks
 {
     internal static class Program
     {
-        private const string Url = "http://91.210.252.240/broken-links";
+        private const string Url = "http://91.210.252.240/broken-links/";
 
         static void Main(string[] args)
         {
+            var start = DateTime.Now;
+            
             var scraper = new Scraper(Url);
             scraper.ScrapUrl();
             
             LogResponses(scraper.Valid, "../../../Valid.txt");
             LogResponses(scraper.Invalid, "../../../Invalid.txt");
+
+            var finish = DateTime.Now;
+            
+            Console.WriteLine(finish - start);
         }
         
         private static void LogResponses(IReadOnlyCollection<string> responses, string path)
@@ -26,6 +32,7 @@ namespace BrokenLinks
                 writer.WriteLine(res);
             }
             
+            writer.WriteLine();
             writer.WriteLine($"Responses count: {responses.Count()}");
             writer.WriteLine($"Time {DateTime.Now:h:mm:ss tt}");
         }
