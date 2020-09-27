@@ -1,15 +1,10 @@
-using System;
 using System.Collections.Generic;
-using System.Collections.Immutable;
 using System.Linq;
-using System.Net.Http;
-using System.Reflection.Metadata;
-using System.Runtime.InteropServices;
 using HtmlAgilityPack;
 
 namespace BrokenLinks
 {
-    public class SiteParser
+    public class UrlFinder
     {
         private static readonly List<string> Excepted = new List<string>()
         {
@@ -47,7 +42,7 @@ namespace BrokenLinks
         public static IEnumerable<string> GetUniqueLinksFromSite(string url)
         {
             // Get all unique links (hashset) from root url
-            var links = GetUniqueLinksFromPage(Scraper.Url);
+            var links = GetUniqueLinksFromPage(url);
             
             var stack = new Stack<string>();    // Stores unvisited links to visit
             var visited = new Stack<string>();    // Result array with all unique links

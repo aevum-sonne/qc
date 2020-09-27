@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BrokenLinks", "BrokenLinks\BrokenLinks.csproj", "{F423536C-FB5E-404D-A644-7CF88CBC5041}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F423536C-FB5E-404D-A644-7CF88CBC5041}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F423536C-FB5E-404D-A644-7CF88CBC5041}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F423536C-FB5E-404D-A644-7CF88CBC5041}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F423536C-FB5E-404D-A644-7CF88CBC5041}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
