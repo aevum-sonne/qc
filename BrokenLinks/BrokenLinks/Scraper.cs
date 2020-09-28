@@ -28,7 +28,14 @@ namespace BrokenLinks
             
             foreach (var link in links)
             {
-                var url = _url + link;
+                var url = link;
+                
+                // If link is internal concatenate IP and link
+                if (!UrlFinder.IsExternalLink(link))
+                {
+                    url = _url + link;
+                }
+
                 var response = client.GetAsync(url).Result;
                 var log = $"{url} {response.StatusCode.GetHashCode()} {response.ReasonPhrase}";
 

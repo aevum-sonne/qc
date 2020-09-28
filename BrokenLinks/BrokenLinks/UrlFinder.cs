@@ -11,10 +11,10 @@ namespace BrokenLinks
         {
             "mailto:",
             "tel:",
-            "sms:",
-            "https:",
-            "http:"
+            "sms:"
         };
+
+        private const string HttpProtocol = "http"; 
 
         private static List<string> _links = new List<string>();
 
@@ -22,6 +22,11 @@ namespace BrokenLinks
         {
             // Condition { Not in excepted links or anchor }
             return !(Excepted.Any(str.Contains) || str.StartsWith("#"));
+        }
+
+        public static bool IsExternalLink(string link)
+        {
+            return link.Contains(HttpProtocol);
         }
 
         private static List<string> GetUniqueLinksFromPage(string url)
@@ -57,12 +62,19 @@ namespace BrokenLinks
                 // Pop first element from stack
                 var link = stack.First();
                 stack.RemoveAt(0);
-
+                
                 if (!visited.Contains(link))
                 {
                     visited.Add(link);
                 }
+
+                // If link is external skip current iteration
+                if (IsExternalLink(link))
+                {
+                    continue;
+                }
                 
+                // Get all links from page
                 links = GetUniqueLinksFromPage(url + link);
 
                 // If unvisited and not in stack push to stack
