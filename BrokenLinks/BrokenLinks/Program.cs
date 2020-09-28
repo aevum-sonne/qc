@@ -11,17 +11,11 @@ namespace BrokenLinks
 
         static void Main(string[] args)
         {
-            var start = DateTime.Now;
-            
             var scraper = new Scraper(Url);
             scraper.ScrapUrl();
             
             LogResponses(scraper.Valid, "../../../Valid.txt");
             LogResponses(scraper.Invalid, "../../../Invalid.txt");
-
-            var finish = DateTime.Now;
-            
-            Console.WriteLine(finish - start);
         }
         
         private static void LogResponses(IReadOnlyCollection<string> responses, string path)

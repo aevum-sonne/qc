@@ -5,7 +5,7 @@ using HtmlAgilityPack;
 
 namespace BrokenLinks
 {
-    public class UrlFinder
+    public static class UrlFinder
     {
         private static readonly List<string> Excepted = new List<string>()
         {
@@ -16,7 +16,7 @@ namespace BrokenLinks
             "http:"
         };
 
-        private List<string> _links = new List<string>();
+        private static List<string> _links = new List<string>();
 
         private static bool IsSitePage(string str)
         {
@@ -42,12 +42,13 @@ namespace BrokenLinks
         // DFS traversal on site pages
         public static IEnumerable<string> GetUniqueLinksFromSite(string url)
         {
-            // Get all unique links from root url
-            var links = GetUniqueLinksFromPage(url);
-            
             var stack = new List<string>();    // Stores unvisited links to visit
             var visited = new List<string>();    // All links that called GetUniqueLinksFromPage()
-
+            
+            // Get all unique links from root url
+            var links = GetUniqueLinksFromPage(url);
+            // Mark root url visited
+            visited.Add("");
             // Start traversal from first element
             stack.Add(links.First());
             
@@ -65,9 +66,8 @@ namespace BrokenLinks
                 links = GetUniqueLinksFromPage(url + link);
 
                 // If unvisited and not in stack push to stack
-                foreach (var currLink in links.Where(currLink => !visited.Contains(currLink)))
+                foreach (var currLink in links.Where(currLink => !visited.Contains(currLink) && !stack.Contains(currLink)))
                 {
-                    visited.Add(currLink);
                     stack.Insert(0, currLink);
                 }
             }

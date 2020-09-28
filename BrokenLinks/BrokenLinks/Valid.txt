@@ -1,11 +1,12 @@
+http://91.210.252.240/broken-links/ 200 OK
 http://91.210.252.240/broken-links/index.html 200 OK
-http://91.210.252.240/broken-links/about.html 200 OK
-http://91.210.252.240/broken-links/work.html 200 OK
-http://91.210.252.240/broken-links/pricing.html 200 OK
-http://91.210.252.240/broken-links/blog.html 200 OK
-http://91.210.252.240/broken-links/contact.html 200 OK
 http://91.210.252.240/broken-links/blog-single.html 200 OK
+http://91.210.252.240/broken-links/contact.html 200 OK
+http://91.210.252.240/broken-links/blog.html 200 OK
+http://91.210.252.240/broken-links/pricing.html 200 OK
+http://91.210.252.240/broken-links/work.html 200 OK
+http://91.210.252.240/broken-links/about.html 200 OK
 http://91.210.252.240/broken-links/../links/no204content.php 204 No Content
 
-Responses count: 8
-Time 10:44:12 PM
+Responses count: 9
+Time 7:28:29 AM
