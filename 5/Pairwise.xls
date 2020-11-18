@@ -1,0 +1,48 @@
+Font	Size	Font Style	Font Color	Underline Style	Underline Color	Strikethrough	Double Strikethrough	Superscript	Subscript	Small Caps	All Caps	Equalize characters' height	Offset
+Arial	72.5	bold	white	double line	red	true	false	true	false	false	false	true	50
+Courier New	20	italic	green	none	none	false	true	true	false	false	true	false	50
+Times New Roman	4000	bold italic	red	none	none	false	true	false	true	true	false	true	-100
+Verdana	1	regular	black	wavy	blue	true	false	true	false	true	false	false	100
+Calibri	4000	bold	blue	line	blue	true	false	false	true	false	true	false	-100
+Verdana	72.5	regular	black	dotted	green	false	true	false	true	false	true	true	-50
+Calibri	1	italic	green	none	none	true	false	false	false	true	false	true	0
+Times New Roman	1	bold italic	red	line	red	false	true	true	false	false	true	false	1
+Arial	20	bold	blue	dotted	blue	false	true	true	false	true	false	true	1
+Arial	4000	regular	white	none	none	false	true	true	false	false	true	true	100
+Calibri	20	bold italic	white	double line	black	false	true	false	false	false	true	false	0
+Courier New	20	regular	red	line	black	true	false	true	false	true	false	true	50
+Courier New	72.5	bold	black	none	none	false	false	false	true	false	true	false	-1
+Times New Roman	72.5	bold italic	red	wavy	blue	true	false	false	false	false	true	false	0
+Verdana	4000	italic	blue	wavy	white	false	true	true	false	false	true	false	50
+Arial	1	italic	white	dotted	green	true	false	false	false	true	false	false	0
+Calibri	72.5	regular	blue	none	none	true	false	true	false	true	false	true	1
+Courier New	4000	bold	green	wavy	green	false	true	true	false	false	true	true	1
+Times New Roman	20	italic	red	double line	green	false	true	true	false	false	true	true	100
+Verdana	1	italic	green	double line	black	false	true	false	true	true	false	true	-1
+Times New Roman	20	regular	white	wavy	red	true	false	false	true	true	false	true	-1
+Arial	72.5	bold italic	green	line	blue	false	true	false	false	false	true	false	-1
+Courier New	4000	bold italic	green	dotted	red	true	false	false	false	true	false	false	-50
+Arial	20	bold	black	double line	white	true	false	false	true	true	false	true	-50
+Verdana	4000	bold italic	black	line	white	false	false	false	false	false	true	true	0
+Verdana	1	bold	red	none	none	true	false	false	false	false	true	false	-50
+Times New Roman	72.5	italic	blue	wavy	black	true	false	false	true	false	false	true	-50
+Calibri	1	bold italic	blue	dotted	green	false	true	true	false	false	false	false	50
+Calibri	4000	italic	red	line	green	false	true	false	false	false	false	false	-1
+Verdana	20	italic	black	double line	red	false	true	false	false	false	true	false	-100
+Courier New	4000	italic	white	double line	blue	false	true	false	true	false	false	false	-50
+Verdana	1	regular	white	double line	white	true	false	true	false	true	false	false	1
+Arial	1	regular	green	wavy	green	false	true	false	false	true	false	true	-100
+Times New Roman	1	bold	black	dotted	blue	false	true	true	false	true	false	false	50
+Courier New	72.5	bold	blue	dotted	black	false	false	true	false	false	true	true	100
+Calibri	4000	bold italic	black	dotted	black	false	false	false	false	false	false	true	-100
+Calibri	1	bold italic	green	line	red	false	false	true	false	true	false	false	100
+Arial	72.5	bold	red	dotted	white	false	true	false	false	false	false	true	-1
+Calibri	72.5	regular	white	wavy	white	false	false	false	false	false	true	true	-100
+Calibri	1	regular	blue	line	red	false	false	false	true	false	true	false	-50
+Courier New	1	italic	green	line	white	true	false	true	false	false	false	true	100
+Arial	1	italic	black	double line	black	true	false	true	false	true	false	true	1
+Courier New	1	bold	blue	double line	blue	false	true	false	true	false	true	false	-100
+Courier New	72.5	regular	blue	wavy	red	false	false	false	false	true	false	true	0
+Times New Roman	4000	bold italic	white	line	white	false	false	false	false	false	true	false	-1
+Times New Roman	4000	bold	green	line	red	true	false	false	false	false	false	true	0
+Calibri	20	bold	blue	line	black	true	false	false	true	true	false	false	-1
