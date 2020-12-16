@@ -5,6 +5,8 @@
 *.userosscache
 *.sln.docstates
 
+mountebank-v2.3.3-darwin-x64/
+
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
 
