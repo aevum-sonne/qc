@@ -1,0 +1,86 @@
+{
+  "urls": [
+    {
+      "get_all": "http://91.210.252.240:9010/api/products",
+      "delete_product": "http://91.210.252.240:9010/api/deleteproduct?id=",
+      "add_product": "http://91.210.252.240:9010/api/addproduct",
+      "edit_product": "http://91.210.252.240:9010/api/editproduct"
+    }
+  ],
+  "products": [
+    {
+      "product" : {
+        "category_id": "1",
+        "title": "Test Watch",
+        "content": "Test Content",
+        "price": "1.1",
+        "old_price": "1.0",
+        "status": "1",
+        "keywords": "test",
+        "description": "Test Description"
+      }
+    },
+    {
+      "product" : {
+        "category_id": "2",
+        "title": "Test Watch",
+        "content": "Test Content",
+        "price": "2.2",
+        "old_price": "2.0",
+        "status": "1",
+        "keywords": "test",
+        "description": "Test Description"
+      }
+    },
+    {
+      "product" : {
+        "category_id": "3",
+        "title": "Test Watch",
+        "content": "Test Content",
+        "price": "3.3",
+        "old_price": "3.0",
+        "status": "1",
+        "keywords": "test",
+        "description": "Test Description"
+      }
+    }
+  ],
+  "edited_products": [
+    {
+      "product" : {
+        "category_id": "1",
+        "title": "Edited Test Watch",
+        "content": "Edited Test Content",
+        "price": "1.1",
+        "old_price": "1.0",
+        "status": "1",
+        "keywords": "test",
+        "description": "Edited Test Description"
+      }
+    },
+    {
+      "product" : {
+        "category_id": "2",
+        "title": "Edited Test Watch",
+        "content": "Edited Test Content",
+        "price": "2.2",
+        "old_price": "2.0",
+        "status": "1",
+        "keywords": "test",
+        "description": "Edited Test Description"
+      }
+    },
+    {
+      "product" : {
+        "category_id": "3",
+        "title": "Edited Test Watch",
+        "content": "Edited Test Content",
+        "price": "3.3",
+        "old_price": "3.0",
+        "status": "1",
+        "keywords": "test",
+        "description": "Edited Test Description"
+      }
+    }
+  ]
+}
